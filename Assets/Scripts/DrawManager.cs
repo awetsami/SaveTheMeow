@@ -8,8 +8,8 @@ public class DrawManager : MonoBehaviour
     public GameObject mirrorLinePrefab;     // ID: 0
     public GameObject rockLinePrefab;       // ID: 1
     public GameObject deleteNodePrefab;     // ID: 2 (Silgi için sistem prefabı)
-    public GameObject darkGlassLinePrefab;  // ID: 3 (YENİ: Siyah Cam)
-    public GameObject crystalLinePrefab;    // ID: 4 (YENİ: Kristal)
+    public GameObject darkGlassLinePrefab;  // ID: 3 (Siyah Cam)
+    public GameObject crystalLinePrefab;    // ID: 4 (Kristal)
 
     [Header("Çizim Ayarları")]
     public float minLineLength = 0.5f;
@@ -95,7 +95,6 @@ public class DrawManager : MonoBehaviour
     {
         startPos = worldPos;
 
-        // Seçilen ID'ye göre doğru kalemi elimize alıyoruz
         GameObject prefabToUse = mirrorLinePrefab;
         if (currentPenType == 1) prefabToUse = rockLinePrefab;
         else if (currentPenType == 3) prefabToUse = darkGlassLinePrefab;
@@ -137,9 +136,22 @@ public class DrawManager : MonoBehaviour
                 currentCollider.points = new Vector2[] { startPos, endPos };
                 currentCollider.enabled = true;
 
+                // --- YENİ: UZUNLUK VE MALİYET HESAPLAMA SİSTEMİ ---
+                float lineLength = Vector2.Distance(startPos, endPos);
+                float cost = 0f;
+
+                if (EconomyManager.Instance != null)
+                {
+                    cost = EconomyManager.Instance.GetLineCost(lineLength, currentPenType);
+                    EconomyManager.Instance.AddCost(cost);
+                }
+
                 Vector2 centerPos = (startPos + endPos) / 2f;
                 GameObject deleteNode = Instantiate(deleteNodePrefab, centerPos, Quaternion.identity);
-                deleteNode.GetComponent<ErasableLine>().parentLineObject = currentLineObject;
+
+                ErasableLine erasableScript = deleteNode.GetComponent<ErasableLine>();
+                erasableScript.parentLineObject = currentLineObject;
+                erasableScript.lineCost = cost; // Faturayı noktaya yazdırıyoruz
 
                 if (currentPenType != 2)
                 {

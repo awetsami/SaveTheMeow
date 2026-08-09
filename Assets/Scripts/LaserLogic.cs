@@ -22,12 +22,15 @@ public class LaserLogic : MonoBehaviour
     public LayerMask interactableLayers;
 
     [Header("Kristal ve Cam Sistemi")]
-    public int maxDepth = 4; // Lazer en fazla 4 kere bölünebilir/filtrelenebilir
+    public int maxDepth = 4;
     [HideInInspector] public int currentDepth = 0;
     [HideInInspector] public bool isChild = false;
     [HideInInspector] public Vector2 customStartPosition;
     [HideInInspector] public Vector2 customStartDirection;
     [HideInInspector] public Color currentColor;
+
+    // YENİ: Lazerin kediye zarar verip veremeyeceğini tutan hafıza
+    [HideInInspector] public bool isHarmless = false;
 
     private LineRenderer lineRenderer;
     private List<Vector2> calculatedPath = new List<Vector2>();
@@ -35,7 +38,6 @@ public class LaserLogic : MonoBehaviour
 
     private List<LaserLogic> childLasers = new List<LaserLogic>();
 
-    // Lazerin ne tür bir engelden doğduğunu ayırıyoruz
     public enum BranchType { Crystal, DarkGlass }
 
     struct BranchPoint
@@ -50,14 +52,13 @@ public class LaserLogic : MonoBehaviour
     {
         lineRenderer = GetComponent<LineRenderer>();
 
-        // Eğer bu ana lazerse (çocuk değilse), normal renkle başla
         if (!isChild)
         {
             SetColor(normalColor);
+            isHarmless = false; // Ana lazer her zaman tehlikelidir
         }
     }
 
-    // Lazere istediğimiz rengi veren fonksiyon
     public void SetColor(Color c)
     {
         currentColor = c;
@@ -106,7 +107,6 @@ public class LaserLogic : MonoBehaviour
                 }
                 else if (hitTag == "DarkGlass")
                 {
-                    // YENİ SİYAH CAM MANTIĞI: Ana lazer camın yüzeyinde durur. İçinden "Karanlık" kopyasını fırlatır.
                     if (currentDepth < maxDepth)
                     {
                         activeBranches.Add(new BranchPoint
@@ -116,11 +116,10 @@ public class LaserLogic : MonoBehaviour
                             bType = BranchType.DarkGlass
                         });
                     }
-                    break; // Ana lazerin çizimini camda sonlandır
+                    break;
                 }
                 else if (hitTag == "Crystal")
                 {
-                    // KRİSTAL MANTIĞI: Ana gövde devam eder, yanlara kopya fırlatır
                     if (currentDepth < maxDepth)
                     {
                         activeBranches.Add(new BranchPoint { pos = hit.point + (currentDirection * 0.15f), dir = Quaternion.Euler(0, 0, 45) * currentDirection, bType = BranchType.Crystal });
@@ -184,7 +183,7 @@ public class LaserLogic : MonoBehaviour
                 float distToTarget = Vector2.Distance(previousAnchor, targetPoint);
                 float distToTip = Vector2.Distance(previousAnchor, currentTip);
 
-                if (distToTip > distToTarget)
+                if (distToTarget < distToTip)
                 {
                     visualPath[tipIndex] = targetPoint;
                 }
@@ -252,8 +251,12 @@ public class LaserLogic : MonoBehaviour
                 }
                 else if (hit.collider.CompareTag("Cat"))
                 {
-                    CatLogic catScript = hit.collider.GetComponent<CatLogic>();
-                    if (catScript != null) catScript.GetHitByLaser(1f);
+                    // YENİ: Sadece Zararsız DEĞİLSE kediyi öldür
+                    if (!isHarmless)
+                    {
+                        CatLogic catScript = hit.collider.GetComponent<CatLogic>();
+                        if (catScript != null) catScript.GetHitByLaser(1f);
+                    }
                 }
             }
         }
@@ -291,16 +294,18 @@ public class LaserLogic : MonoBehaviour
                     childLasers[i].customStartPosition = activeBranches[i].pos;
                     childLasers[i].customStartDirection = activeBranches[i].dir;
 
-                    // YENİ: Kopan dalın rengini kaynağına göre ayarla
+                    // YENİ: Miras ve Filtre Sistemi
                     if (activeBranches[i].bType == BranchType.DarkGlass)
                     {
-                        // Siyah camdan çıkan lazer kararır
+                        // Siyah camdan çıkan lazer kararır ve KEDİYE ZARAR VERMEZ
                         childLasers[i].SetColor(darkColor);
+                        childLasers[i].isHarmless = true;
                     }
                     else
                     {
-                        // Kristalden çıkan lazer mevcut rengini (Açıksa açık, koyuysa koyu) korur
+                        // Kristalden çıkan lazer mevcut rengini ve özelliğini (Tehlikeli/Zararsız) korur
                         childLasers[i].SetColor(this.currentColor);
+                        childLasers[i].isHarmless = this.isHarmless;
                     }
                 }
                 else

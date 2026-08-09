@@ -44,15 +44,16 @@ public class CatLogic : MonoBehaviour
             }
         }
 
+        // YENİ: Doğrudan sayacı başlatmak yerine GameManager'a haber veriyoruz
         if (foundAnyClearPath && !isFreedomPathOpen)
         {
             isFreedomPathOpen = true;
-            GameManager.Instance.StartFreedomCountdown();
+            GameManager.Instance.CatFreed(); // <-- DEĞİŞTİ
         }
         else if (!foundAnyClearPath && isFreedomPathOpen)
         {
             isFreedomPathOpen = false;
-            GameManager.Instance.CancelFreedomCountdown();
+            GameManager.Instance.CatTrapped(); // <-- DEĞİŞTİ
         }
     }
 

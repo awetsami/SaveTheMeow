@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4950742981290150184}
   - component: {fileID: 6869525739913905089}
   - component: {fileID: 9173473290371126928}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ice
   m_TagString: Ice
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_Color: {r: 0.38768244, g: 0.57823145, b: 0.6792453, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 2
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
@@ -134,7 +134,7 @@ BoxCollider2D:
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
-    drawMode: 0
+    drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}

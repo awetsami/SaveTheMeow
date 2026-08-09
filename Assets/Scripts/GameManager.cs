@@ -15,6 +15,10 @@ public class GameManager : MonoBehaviour
     [Header("Sistemler")]
     public DrawManager drawManager;
 
+    [Header("Kedi Takip Sistemi")]
+    public int totalCatsInLevel = 0;
+    public int freedCatsCount = 0;
+
     [HideInInspector] public bool isGameOver = false;
     private Coroutine countdownCoroutine;
     private bool isCounting = false;
@@ -24,6 +28,36 @@ public class GameManager : MonoBehaviour
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
     }
+
+    void Start()
+    {
+        // YENİ: Oyun başladığında sahnedeki tüm kedileri bul ve say
+        totalCatsInLevel = FindObjectsByType<CatLogic>(FindObjectsSortMode.None).Length;
+        freedCatsCount = 0;
+    }
+
+    // --- YENİ KEDİ YOKLAMA SİSTEMİ ---
+
+    public void CatFreed()
+    {
+        freedCatsCount++;
+
+        // Sadece tüm kediler kurtulduysa sayacı başlat
+        if (freedCatsCount >= totalCatsInLevel)
+        {
+            StartFreedomCountdown();
+        }
+    }
+
+    public void CatTrapped()
+    {
+        freedCatsCount--;
+
+        // Eğer bir kedi bile tekrar hapsolursa (veya yoluna taş çizilirse) sayacı iptal et
+        CancelFreedomCountdown();
+    }
+
+    // ---------------------------------
 
     public void TriggerGameOver()
     {
@@ -40,6 +74,7 @@ public class GameManager : MonoBehaviour
         if (drawManager != null) drawManager.enabled = false;
     }
 
+    // Not: Artık CatLogic doğrudan bu fonksiyonları çağırmayacak, CatFreed'i çağıracak
     public void StartFreedomCountdown()
     {
         if (isGameOver || isCounting) return;
@@ -53,7 +88,7 @@ public class GameManager : MonoBehaviour
         if (countdownCoroutine != null) StopCoroutine(countdownCoroutine);
         isCounting = false;
         countdownText.gameObject.SetActive(false);
-        Debug.Log("Sayım iptal edildi! Kedi tekrar hapsoldu.");
+        Debug.Log("Sayım iptal edildi! Kedilerden biri hala hapis.");
     }
 
     IEnumerator CountdownRoutine()
@@ -84,6 +119,8 @@ public class GameManager : MonoBehaviour
 
         winPanel.SetActive(true);
         if (drawManager != null) drawManager.enabled = false;
+
+        if (EconomyManager.Instance != null) EconomyManager.Instance.CalculateLevelProfit();
     }
 
     // --- BUTON FONKSİYONLARI VE KAYIT SİSTEMİ ---
@@ -98,7 +135,6 @@ public class GameManager : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = currentSceneIndex + 1;
 
-        // KAYIT SİSTEMİ (SAVE): Eğer oyuncu yeni bir bölüme geçtiyse, bunu telefona kaydet
         int reachedLevel = PlayerPrefs.GetInt("ReachedLevel", 1);
         if (nextSceneIndex > reachedLevel)
         {

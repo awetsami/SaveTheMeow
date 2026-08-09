@@ -1,20 +1,19 @@
 using UnityEngine;
 using TMPro;
-using System;
 
 public class EconomyManager : MonoBehaviour
 {
     public static EconomyManager Instance;
 
     [Header("Ekonomi Ayarları")]
-    public int levelReward = 500;        // Bölümü geçince verilecek standart ödül
-    public float costPerMeter = 50f;     // 1 birimlik (metre) çizginin maliyeti
+    public int levelReward = 500;        // Bölümü geçince verilecek ödül
+
+    [Tooltip("Sırasıyla: 0=Ayna, 1=Taş, 2=Silgi, 3=SiyahCam, 4=Kristal")]
+    public float[] penCosts = { 50f, 25f, 0f, 400f, 200f }; // Metre başına fiyatlar
 
     [Header("Arayüz (UI) Bağlantıları")]
-    public TextMeshProUGUI totalMoneyText; // Sağ üstteki toplam para yazısı
-    public TextMeshProUGUI currentCostText;  // O anki harcamayı gösteren yazı
-
-    // Oyun sonu ekranında (Win Panel) gösterilecek kâr/zarar yazısı
+    public TextMeshProUGUI totalMoneyText;
+    public TextMeshProUGUI currentCostText;
     public TextMeshProUGUI profitText;
 
     [HideInInspector] public int totalMoney;
@@ -22,34 +21,33 @@ public class EconomyManager : MonoBehaviour
 
     void Awake()
     {
-        // Singleton mantığı: Her yerden EconomyManager.Instance diyerek ulaşabilmemiz için
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
 
-        // Oyuncu oyuna ilk defa giriyorsa cebine 1000 Altın koyalım, girmiyorsa kayıtlı parasını çekelim
         totalMoney = PlayerPrefs.GetInt("TotalMoney", 1000);
         UpdateUI();
     }
 
-    // Oyuncu çizgi çektikçe DrawManager burayı çağıracak
-    public void AddCost(float lineLength)
+    // YENİ: Hangi kalemin metresi ne kadar? (DrawManager buraya soracak)
+    public float GetLineCost(float length, int penType)
     {
-        float cost = lineLength * costPerMeter;
+        if (penType < 0 || penType >= penCosts.Length) return 0f;
+        return length * penCosts[penType];
+    }
+
+    public void AddCost(float cost)
+    {
         currentLevelCost += cost;
         UpdateUI();
     }
 
-    // Oyuncu silgiyle çizgiyi silerse parasının %100'ü (veya ileride istersen %50'si) iade edilecek
-    public void RefundCost(float lineLength)
+    public void RefundCost(float cost)
     {
-        float refund = lineLength * costPerMeter;
-        currentLevelCost -= refund;
-
-        if (currentLevelCost < 0) currentLevelCost = 0; // Hata payını önlemek için
+        currentLevelCost -= cost;
+        if (currentLevelCost < 0) currentLevelCost = 0;
         UpdateUI();
     }
 
-    // Kedi kurtulduğunda GameManager burayı çağıracak
     public void CalculateLevelProfit()
     {
         int costInt = Mathf.RoundToInt(currentLevelCost);
@@ -57,20 +55,17 @@ public class EconomyManager : MonoBehaviour
 
         totalMoney += profit;
 
-        // İleride eksi bakiyeye düşmeyi engellemek veya borç sistemi yapmak için temel kontrol
         if (totalMoney < 0) totalMoney = 0;
 
-        // Yeni parayı telefona kaydet
         PlayerPrefs.SetInt("TotalMoney", totalMoney);
         PlayerPrefs.Save();
 
-        // Kazanma ekranındaki (Win Panel) yazıyı güncelle
         if (profitText != null)
         {
             if (profit >= 0)
                 profitText.text = "Ödül: " + levelReward + "\nMaliyet: -" + costInt + "\nKAZANÇ: +" + profit + " 🪙";
             else
-                profitText.text = "Ödül: " + levelReward + "\nMaliyet: -" + costInt + "\nZARAR: " + profit + " 🪙\n(Daha kısa yollar bulmalısın!)";
+                profitText.text = "Ödül: " + levelReward + "\nMaliyet: -" + costInt + "\nZARAR: " + profit + " 🪙\n(Daha ucuz yollar bulmalısın!)";
         }
 
         UpdateUI();

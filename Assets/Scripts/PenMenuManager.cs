@@ -6,6 +6,13 @@ public class PenMenuManager : MonoBehaviour
     [Header("Arayüz Elemanları")]
     public RectTransform penPanel;
 
+    [Header("Kalem Butonları (Göster/Gizle İçin)")]
+    public GameObject mirrorButton;
+    public GameObject rockButton;
+    public GameObject eraserButton;
+    public GameObject darkGlassButton;
+    public GameObject crystalButton;
+
     [Header("Animasyon Ayarları")]
     public float visibleX = 0f;
     public float hiddenX = -300f;
@@ -25,6 +32,16 @@ public class PenMenuManager : MonoBehaviour
             penPanel.anchoredPosition = new Vector2(hiddenX, penPanel.anchoredPosition.y);
             isMenuOpen = false;
         }
+    }
+
+    // İŞTE UNITY'NİN BULAMADIĞI O FONKSİYON BURADA:
+    public void SetupAvailablePens(bool mirror, bool rock, bool eraser, bool darkGlass, bool crystal)
+    {
+        if (mirrorButton != null) mirrorButton.SetActive(mirror);
+        if (rockButton != null) rockButton.SetActive(rock);
+        if (eraserButton != null) eraserButton.SetActive(eraser);
+        if (darkGlassButton != null) darkGlassButton.SetActive(darkGlass);
+        if (crystalButton != null) crystalButton.SetActive(crystal);
     }
 
     public void TogglePenMenu()
@@ -71,14 +88,12 @@ public class PenMenuManager : MonoBehaviour
         CloseMenu();
     }
 
-    // YENİ: Siyah Cam Kalemi (ID: 3)
     public void SelectDarkGlassPen()
     {
         if (drawManager != null) drawManager.SetPenType(3);
         CloseMenu();
     }
 
-    // YENİ: Kristal Kalemi (ID: 4)
     public void SelectCrystalPen()
     {
         if (drawManager != null) drawManager.SetPenType(4);

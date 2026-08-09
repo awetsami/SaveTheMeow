@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3132711077204946476}
   - component: {fileID: 4950742981290150184}
   - component: {fileID: 2254222412996065932}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: DarkGlass
   m_TagString: DarkGlass
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_Color: {r: 0, g: 0, b: 0, a: 0.5137255}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 2
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
@@ -133,7 +133,7 @@ BoxCollider2D:
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
-    drawMode: 0
+    drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
