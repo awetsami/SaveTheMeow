@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2155866503784942626}
   - component: {fileID: 7892334744916123962}
   - component: {fileID: 6013454015331688448}
+  - component: {fileID: 1541744753395019657}
   - component: {fileID: 3173904798679365139}
   m_Layer: 0
   m_Name: --- MANAGERS ---
@@ -69,6 +70,8 @@ MonoBehaviour:
   losePanel: {fileID: 0}
   countdownText: {fileID: 0}
   drawManager: {fileID: 2155866503784942626}
+  totalCatsInLevel: 0
+  freedCatsCount: 0
   isGameOver: 0
 --- !u!114 &6013454015331688448
 MonoBehaviour:
@@ -83,10 +86,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PenMenuManager
   penPanel: {fileID: 0}
+  mirrorButton: {fileID: 0}
+  rockButton: {fileID: 0}
+  eraserButton: {fileID: 0}
+  darkGlassButton: {fileID: 0}
+  crystalButton: {fileID: 0}
   visibleX: 0
   hiddenX: -246
   slideDuration: 0.3
   drawManager: {fileID: 2155866503784942626}
+--- !u!114 &1541744753395019657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2458634317280465604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b65f194b28b4bf4b8f64f89958d9101, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutorialManager
+  tutorialOverlay: {fileID: 0}
+  tutorialText: {fileID: 0}
+  drawManager: {fileID: 2155866503784942626}
+  isTutorialActive: 0
 --- !u!114 &3173904798679365139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,15 +123,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346f6962a23a62d419b7a66f2ae483c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EconomyManager
-  levelReward: 500
+  totalMoneyText: {fileID: 0}
+  currentCostText: {fileID: 0}
+  profitText: {fileID: 0}
+  totalMoney: 0
+  currentLevelCost: 0
+  levelReward: 100
+  startingMoney: 200
   penCosts:
   - 50
   - 25
   - 0
   - 400
   - 200
-  totalMoneyText: {fileID: 0}
-  currentCostText: {fileID: 0}
-  profitText: {fileID: 0}
-  totalMoney: 0
-  currentLevelCost: 0

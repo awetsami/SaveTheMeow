@@ -416,6 +416,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
+      propertyPath: levelReward
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 8693861192274473215, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
       propertyPath: m_Name
       value: CORE_SYSTEMS

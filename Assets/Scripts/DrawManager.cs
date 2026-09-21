@@ -152,7 +152,10 @@ public class DrawManager : MonoBehaviour
                 ErasableLine erasableScript = deleteNode.GetComponent<ErasableLine>();
                 erasableScript.parentLineObject = currentLineObject;
                 erasableScript.lineCost = cost; // Faturayı noktaya yazdırıyoruz
-
+                if (TutorialManager.Instance != null && TutorialManager.Instance.isTutorialActive)
+                {
+                    TutorialManager.Instance.EndTutorial();
+                }
                 if (currentPenType != 2)
                 {
                     if (deleteNode.GetComponent<SpriteRenderer>() != null)

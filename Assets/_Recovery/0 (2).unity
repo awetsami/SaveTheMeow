@@ -484,7 +484,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 97540522}
-  - component: {fileID: 97540525}
   - component: {fileID: 97540524}
   - component: {fileID: 97540523}
   m_Layer: 5
@@ -613,20 +612,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 97540521}
   m_CullTransparentMesh: 1
---- !u!114 &97540525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 97540521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 18"
-  enText: Level 18
 --- !u!1 &106576267
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,7 +754,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 121053609}
-  - component: {fileID: 121053612}
   - component: {fileID: 121053611}
   - component: {fileID: 121053610}
   m_Layer: 5
@@ -898,20 +882,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121053608}
   m_CullTransparentMesh: 1
---- !u!114 &121053612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 121053608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 28"
-  enText: Level 28
 --- !u!1 &150826546
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,7 +893,6 @@ GameObject:
   - component: {fileID: 150826549}
   - component: {fileID: 150826548}
   - component: {fileID: 150826547}
-  - component: {fileID: 150826550}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1005,50 +974,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &150826550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150826546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_AllowHDROutput: 1
-  m_UseScreenCoordOverride: 0
-  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_TaaSettings:
-    m_Quality: 3
-    m_FrameInfluence: 0.1
-    m_JitterScale: 1
-    m_MipBias: 0
-    m_VarianceClampScale: 0.9
-    m_ContrastAdaptiveSharpening: 0
-  m_Version: 2
 --- !u!1 &161201524
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,7 +1253,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 223221208}
-  - component: {fileID: 223221211}
   - component: {fileID: 223221210}
   - component: {fileID: 223221209}
   m_Layer: 5
@@ -1457,20 +1381,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223221207}
   m_CullTransparentMesh: 1
---- !u!114 &223221211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 223221207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: Geri
-  enText: Back
 --- !u!1 &226126040
 GameObject:
   m_ObjectHideFlags: 0
@@ -1613,7 +1523,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 227271910}
-  - component: {fileID: 227271913}
   - component: {fileID: 227271912}
   - component: {fileID: 227271911}
   m_Layer: 5
@@ -1742,20 +1651,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 227271909}
   m_CullTransparentMesh: 1
---- !u!114 &227271913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 227271909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 14"
-  enText: Level 14
 --- !u!1 &252436340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1765,7 +1660,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 252436341}
-  - component: {fileID: 252436344}
   - component: {fileID: 252436343}
   - component: {fileID: 252436342}
   m_Layer: 5
@@ -1894,20 +1788,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252436340}
   m_CullTransparentMesh: 1
---- !u!114 &252436344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 252436340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 7"
-  enText: Level 7
 --- !u!1 &264871421
 GameObject:
   m_ObjectHideFlags: 0
@@ -2442,7 +2322,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 314924345}
-  - component: {fileID: 314924348}
   - component: {fileID: 314924347}
   - component: {fileID: 314924346}
   m_Layer: 5
@@ -2571,20 +2450,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314924344}
   m_CullTransparentMesh: 1
---- !u!114 &314924348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 314924344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 23"
-  enText: Level 23
 --- !u!1 &329600664
 GameObject:
   m_ObjectHideFlags: 0
@@ -2594,7 +2459,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 329600665}
-  - component: {fileID: 329600668}
   - component: {fileID: 329600667}
   - component: {fileID: 329600666}
   m_Layer: 5
@@ -2723,20 +2587,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329600664}
   m_CullTransparentMesh: 1
---- !u!114 &329600668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 329600664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 9"
-  enText: Level 9
 --- !u!1 &341686735
 GameObject:
   m_ObjectHideFlags: 0
@@ -3224,7 +3074,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 375153631}
-  - component: {fileID: 375153634}
   - component: {fileID: 375153633}
   - component: {fileID: 375153632}
   m_Layer: 5
@@ -3353,20 +3202,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375153630}
   m_CullTransparentMesh: 1
---- !u!114 &375153634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375153630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 3"
-  enText: Level 3
 --- !u!1 &386885073
 GameObject:
   m_ObjectHideFlags: 0
@@ -3581,7 +3416,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 488789248}
-  - component: {fileID: 488789251}
   - component: {fileID: 488789250}
   - component: {fileID: 488789249}
   m_Layer: 5
@@ -3710,20 +3544,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488789247}
   m_CullTransparentMesh: 1
---- !u!114 &488789251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488789247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 17"
-  enText: Level 17
 --- !u!1 &555473604
 GameObject:
   m_ObjectHideFlags: 0
@@ -3733,7 +3553,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 555473605}
-  - component: {fileID: 555473608}
   - component: {fileID: 555473607}
   - component: {fileID: 555473606}
   m_Layer: 5
@@ -3862,20 +3681,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555473604}
   m_CullTransparentMesh: 1
---- !u!114 &555473608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 555473604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 24"
-  enText: Level 24
 --- !u!1 &599033794
 GameObject:
   m_ObjectHideFlags: 0
@@ -4018,7 +3823,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 602531289}
-  - component: {fileID: 602531292}
   - component: {fileID: 602531291}
   - component: {fileID: 602531290}
   m_Layer: 5
@@ -4147,20 +3951,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602531288}
   m_CullTransparentMesh: 1
---- !u!114 &602531292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 602531288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 27"
-  enText: Level 27
 --- !u!1 &621640633
 GameObject:
   m_ObjectHideFlags: 0
@@ -4381,7 +4171,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 671792180}
-  - component: {fileID: 671792183}
   - component: {fileID: 671792182}
   - component: {fileID: 671792181}
   m_Layer: 5
@@ -4510,20 +4299,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671792179}
   m_CullTransparentMesh: 1
---- !u!114 &671792183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 671792179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 26"
-  enText: Level 26
 --- !u!1 &680294109
 GameObject:
   m_ObjectHideFlags: 0
@@ -4666,7 +4441,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 706301801}
-  - component: {fileID: 706301804}
   - component: {fileID: 706301803}
   - component: {fileID: 706301802}
   m_Layer: 5
@@ -4795,20 +4569,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 706301800}
   m_CullTransparentMesh: 1
---- !u!114 &706301804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 706301800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 6"
-  enText: Level 6
 --- !u!1 &716255634
 GameObject:
   m_ObjectHideFlags: 0
@@ -4818,7 +4578,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 716255635}
-  - component: {fileID: 716255638}
   - component: {fileID: 716255637}
   - component: {fileID: 716255636}
   m_Layer: 5
@@ -4947,20 +4706,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716255634}
   m_CullTransparentMesh: 1
---- !u!114 &716255638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716255634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCmler"
-  enText: Levels
 --- !u!1 &735764609
 GameObject:
   m_ObjectHideFlags: 0
@@ -5103,7 +4848,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 756154184}
-  - component: {fileID: 756154187}
   - component: {fileID: 756154186}
   - component: {fileID: 756154185}
   m_Layer: 5
@@ -5232,20 +4976,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 756154183}
   m_CullTransparentMesh: 1
---- !u!114 &756154187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 756154183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 30"
-  enText: Level 30
 --- !u!1 &785419326
 GameObject:
   m_ObjectHideFlags: 0
@@ -5463,7 +5193,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 896452819}
-  - component: {fileID: 896452822}
   - component: {fileID: 896452821}
   - component: {fileID: 896452820}
   m_Layer: 5
@@ -5592,20 +5321,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896452818}
   m_CullTransparentMesh: 1
---- !u!114 &896452822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896452818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 21"
-  enText: Level 21
 --- !u!1 &913895100
 GameObject:
   m_ObjectHideFlags: 0
@@ -5639,7 +5354,7 @@ RectTransform:
   m_Father: {fileID: 476259634}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.25599676}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6584,7 +6299,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1036715006}
-  - component: {fileID: 1036715009}
   - component: {fileID: 1036715008}
   - component: {fileID: 1036715007}
   m_Layer: 5
@@ -6713,20 +6427,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1036715005}
   m_CullTransparentMesh: 1
---- !u!114 &1036715009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1036715005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 25"
-  enText: Level 25
 --- !u!1 &1056630844
 GameObject:
   m_ObjectHideFlags: 0
@@ -6869,7 +6569,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1185205030}
-  - component: {fileID: 1185205033}
   - component: {fileID: 1185205032}
   - component: {fileID: 1185205031}
   m_Layer: 5
@@ -6998,20 +6697,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1185205029}
   m_CullTransparentMesh: 1
---- !u!114 &1185205033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1185205029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 19"
-  enText: Level 19
 --- !u!1 &1264093341
 GameObject:
   m_ObjectHideFlags: 0
@@ -7021,7 +6706,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1264093342}
-  - component: {fileID: 1264093345}
   - component: {fileID: 1264093344}
   - component: {fileID: 1264093343}
   m_Layer: 5
@@ -7150,20 +6834,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264093341}
   m_CullTransparentMesh: 1
---- !u!114 &1264093345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264093341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 4"
-  enText: Level 4
 --- !u!1 &1371858404
 GameObject:
   m_ObjectHideFlags: 0
@@ -7173,7 +6843,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1371858405}
-  - component: {fileID: 1371858408}
   - component: {fileID: 1371858407}
   - component: {fileID: 1371858406}
   m_Layer: 5
@@ -7302,20 +6971,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371858404}
   m_CullTransparentMesh: 1
---- !u!114 &1371858408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1371858404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 5"
-  enText: Level 5
 --- !u!1 &1373694780
 GameObject:
   m_ObjectHideFlags: 0
@@ -7458,7 +7113,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1384006698}
-  - component: {fileID: 1384006701}
   - component: {fileID: 1384006700}
   - component: {fileID: 1384006699}
   m_Layer: 5
@@ -7484,8 +7138,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.011505, y: -7.5884}
-  m_SizeDelta: {x: 56.3378, y: 3.5769997}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1384006699
 MonoBehaviour:
@@ -7534,10 +7188,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.05
+  m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -7573,7 +7227,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 34.62863, y: -3.202362, z: 27.860527, w: 11.528508}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7587,20 +7241,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384006697}
   m_CullTransparentMesh: 1
---- !u!114 &1384006701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384006697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "Eme\u011Fi ge\xE7enler"
-  enText: Credits
 --- !u!1 &1390968704
 GameObject:
   m_ObjectHideFlags: 0
@@ -7610,7 +7250,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1390968705}
-  - component: {fileID: 1390968708}
   - component: {fileID: 1390968707}
   - component: {fileID: 1390968706}
   m_Layer: 5
@@ -7739,20 +7378,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390968704}
   m_CullTransparentMesh: 1
---- !u!114 &1390968708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390968704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 16"
-  enText: Level 16
 --- !u!1 &1405101104
 GameObject:
   m_ObjectHideFlags: 0
@@ -7762,7 +7387,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1405101105}
-  - component: {fileID: 1405101108}
   - component: {fileID: 1405101107}
   - component: {fileID: 1405101106}
   m_Layer: 5
@@ -7891,20 +7515,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1405101104}
   m_CullTransparentMesh: 1
---- !u!114 &1405101108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1405101104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 13"
-  enText: Level 13
 --- !u!1 &1431750576
 GameObject:
   m_ObjectHideFlags: 0
@@ -8450,7 +8060,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1497144788}
-  - component: {fileID: 1497144791}
   - component: {fileID: 1497144790}
   - component: {fileID: 1497144789}
   m_Layer: 5
@@ -8579,20 +8188,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497144787}
   m_CullTransparentMesh: 1
---- !u!114 &1497144791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1497144787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 22"
-  enText: Level 22
 --- !u!1 &1525465122
 GameObject:
   m_ObjectHideFlags: 0
@@ -8692,7 +8287,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1526095899}
-  - component: {fileID: 1526095902}
   - component: {fileID: 1526095901}
   - component: {fileID: 1526095900}
   m_Layer: 5
@@ -8821,20 +8415,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526095898}
   m_CullTransparentMesh: 1
---- !u!114 &1526095902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1526095898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 15"
-  enText: Level 15
 --- !u!1 &1529685011
 GameObject:
   m_ObjectHideFlags: 0
@@ -8844,7 +8424,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1529685012}
-  - component: {fileID: 1529685015}
   - component: {fileID: 1529685014}
   - component: {fileID: 1529685013}
   m_Layer: 5
@@ -8973,20 +8552,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1529685011}
   m_CullTransparentMesh: 1
---- !u!114 &1529685015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1529685011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 20"
-  enText: Level 20
 --- !u!1 &1539327085
 GameObject:
   m_ObjectHideFlags: 0
@@ -8996,7 +8561,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1539327086}
-  - component: {fileID: 1539327089}
   - component: {fileID: 1539327088}
   - component: {fileID: 1539327087}
   m_Layer: 5
@@ -9125,20 +8689,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539327085}
   m_CullTransparentMesh: 1
---- !u!114 &1539327089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1539327085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: Geri
-  enText: Back
 --- !u!1 &1541052443
 GameObject:
   m_ObjectHideFlags: 0
@@ -9148,7 +8698,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1541052444}
-  - component: {fileID: 1541052447}
   - component: {fileID: 1541052446}
   - component: {fileID: 1541052445}
   m_Layer: 5
@@ -9277,20 +8826,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541052443}
   m_CullTransparentMesh: 1
---- !u!114 &1541052447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1541052443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 10"
-  enText: Level 10
 --- !u!1 &1552748098
 GameObject:
   m_ObjectHideFlags: 0
@@ -9434,7 +8969,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1561304998}
   - component: {fileID: 1561305000}
-  - component: {fileID: 1561305001}
   - component: {fileID: 1561304999}
   m_Layer: 5
   m_Name: Text (TMP)
@@ -9562,20 +9096,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1561304997}
   m_CullTransparentMesh: 1
---- !u!114 &1561305001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1561304997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: Ayarlar
-  enText: Settings
 --- !u!1 &1590919837
 GameObject:
   m_ObjectHideFlags: 0
@@ -9594,7 +9114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1590919838
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10087,7 +9607,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1701656271}
-  - component: {fileID: 1701656274}
   - component: {fileID: 1701656273}
   - component: {fileID: 1701656272}
   m_Layer: 5
@@ -10216,20 +9735,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701656270}
   m_CullTransparentMesh: 1
---- !u!114 &1701656274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701656270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 2"
-  enText: Level 2
 --- !u!1 &1724055325
 GameObject:
   m_ObjectHideFlags: 0
@@ -10396,7 +9901,7 @@ RectTransform:
   m_Father: {fileID: 386885074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -10584,7 +10089,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1765603271}
-  - component: {fileID: 1765603274}
   - component: {fileID: 1765603273}
   - component: {fileID: 1765603272}
   m_Layer: 5
@@ -10713,20 +10217,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1765603270}
   m_CullTransparentMesh: 1
---- !u!114 &1765603274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1765603270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 12"
-  enText: Level 12
 --- !u!1 &1786664828
 GameObject:
   m_ObjectHideFlags: 0
@@ -11333,7 +10823,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2050963033}
-  - component: {fileID: 2050963036}
   - component: {fileID: 2050963035}
   - component: {fileID: 2050963034}
   m_Layer: 5
@@ -11462,20 +10951,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050963032}
   m_CullTransparentMesh: 1
---- !u!114 &2050963036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2050963032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 11"
-  enText: Level 11
 --- !u!1 &2055101769
 GameObject:
   m_ObjectHideFlags: 0
@@ -11485,7 +10960,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2055101770}
-  - component: {fileID: 2055101773}
   - component: {fileID: 2055101772}
   - component: {fileID: 2055101771}
   m_Layer: 5
@@ -11614,20 +11088,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055101769}
   m_CullTransparentMesh: 1
---- !u!114 &2055101773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2055101769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 1"
-  enText: Level 1
 --- !u!1 &2101302686
 GameObject:
   m_ObjectHideFlags: 0
@@ -11770,7 +11230,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2108245330}
-  - component: {fileID: 2108245333}
   - component: {fileID: 2108245332}
   - component: {fileID: 2108245331}
   m_Layer: 5
@@ -11899,20 +11358,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108245329}
   m_CullTransparentMesh: 1
---- !u!114 &2108245333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2108245329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 29"
-  enText: Level 29
 --- !u!1 &2142778453
 GameObject:
   m_ObjectHideFlags: 0
@@ -11922,7 +11367,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2142778454}
-  - component: {fileID: 2142778457}
   - component: {fileID: 2142778456}
   - component: {fileID: 2142778455}
   m_Layer: 5
@@ -12051,20 +11495,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142778453}
   m_CullTransparentMesh: 1
---- !u!114 &2142778457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2142778453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7848bb9b838d4f44cbe0ee39b1f4a462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizeUI
-  trText: "B\xF6l\xFCm 8"
-  enText: Level 8
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

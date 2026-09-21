@@ -510,8 +510,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
+      propertyPath: hasTutorial
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
       propertyPath: levelReward
-      value: 500
+      value: 175
       objectReference: {fileID: 0}
     - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
       propertyPath: allowCrystal

@@ -34,7 +34,6 @@ public class PenMenuManager : MonoBehaviour
         }
     }
 
-    // İŞTE UNITY'NİN BULAMADIĞI O FONKSİYON BURADA:
     public void SetupAvailablePens(bool mirror, bool rock, bool eraser, bool darkGlass, bool crystal)
     {
         if (mirrorButton != null) mirrorButton.SetActive(mirror);
@@ -49,6 +48,16 @@ public class PenMenuManager : MonoBehaviour
         isMenuOpen = !isMenuOpen;
         if (slideCoroutine != null) StopCoroutine(slideCoroutine);
         slideCoroutine = StartCoroutine(SlidePanel(isMenuOpen ? visibleX : hiddenX));
+    }
+
+    public void OpenMenu()
+    {
+        if (!isMenuOpen)
+        {
+            isMenuOpen = true;
+            if (slideCoroutine != null) StopCoroutine(slideCoroutine);
+            slideCoroutine = StartCoroutine(SlidePanel(visibleX));
+        }
     }
 
     private IEnumerator SlidePanel(float targetX)
@@ -73,31 +82,45 @@ public class PenMenuManager : MonoBehaviour
     public void SelectMirrorPen()
     {
         if (drawManager != null) drawManager.SetPenType(0);
+        CheckTutorialAdvance();
         CloseMenu();
     }
 
     public void SelectRockPen()
     {
         if (drawManager != null) drawManager.SetPenType(1);
+        CheckTutorialAdvance();
         CloseMenu();
     }
 
     public void SelectEraser()
     {
         if (drawManager != null) drawManager.SetPenType(2);
+        CheckTutorialAdvance();
         CloseMenu();
     }
 
     public void SelectDarkGlassPen()
     {
         if (drawManager != null) drawManager.SetPenType(3);
+        CheckTutorialAdvance();
         CloseMenu();
     }
 
     public void SelectCrystalPen()
     {
         if (drawManager != null) drawManager.SetPenType(4);
+        CheckTutorialAdvance();
         CloseMenu();
+    }
+
+    // YENİ HALİ: Artık LevelSettings'e veya secondMessage'a ihtiyacı yok!
+    private void CheckTutorialAdvance()
+    {
+        if (TutorialManager.Instance != null && TutorialManager.Instance.isTutorialActive)
+        {
+            TutorialManager.Instance.AdvanceTutorial();
+        }
     }
 
     private void CloseMenu()

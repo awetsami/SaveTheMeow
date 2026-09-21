@@ -210,6 +210,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 4170105466204069316, guid: e49df7120dc09174fa54e7d28807f03f, type: 3}
+      propertyPath: m_Radius
+      value: 0.53296405
+      objectReference: {fileID: 0}
+    - target: {fileID: 4170105466204069316, guid: e49df7120dc09174fa54e7d28807f03f, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0032806396
+      objectReference: {fileID: 0}
     - target: {fileID: 4597169098988889082, guid: e49df7120dc09174fa54e7d28807f03f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.53
@@ -308,12 +316,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
+      propertyPath: step1_EN
+      value: Please select the Rock pen.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
+      propertyPath: step1_TR
+      value: "L\xFCtfen Ta\u015F kalemini se\xE7."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
+      propertyPath: step2_EN
+      value: Now place the Rock in front of the laser.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
+      propertyPath: step2_TR
+      value: "\u015Eimdi lazerin \xF6n\xFCne Ta\u015F yerle\u015Ftir."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
       propertyPath: allowRock
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
+      propertyPath: hasTutorial
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
       propertyPath: levelReward
-      value: 250
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
+      propertyPath: firstMessage
+      value: "L\xFCtfen ta\u015F kalemini se\xE7."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
+      propertyPath: secondMessage
+      value: "\u015Eimdi lazerin \xF6n\xFCne ta\u015F \xE7iz."
       objectReference: {fileID: 0}
     - target: {fileID: 8693861192274473215, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
       propertyPath: m_Name

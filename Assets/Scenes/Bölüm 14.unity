@@ -522,12 +522,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
+      propertyPath: step1_EN
+      value: Please select the dark glass pen.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
+      propertyPath: step1_TR
+      value: "L\xFCtfen siyah cam kalemini se\xE7."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
+      propertyPath: step2_EN
+      value: Now place the  dark glass in front of the laser.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
+      propertyPath: step2_TR
+      value: "\u015Eimdi lazerin \xF6n\xFCne siyah cam yerle\u015Ftir."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
+      propertyPath: hasTutorial
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
       propertyPath: levelReward
-      value: 700
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
       propertyPath: allowCrystal
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
+      propertyPath: firstMessage
+      value: "L\xFCtfen SiyahCam kalemini se\xE7."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
+      propertyPath: secondMessage
+      value: "\u015Eimdi lazerin \xF6n\xFCne SiyahCam yerle\u015Ftir."
       objectReference: {fileID: 0}
     - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
       propertyPath: allowDarkGlass

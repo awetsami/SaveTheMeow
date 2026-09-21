@@ -4,6 +4,10 @@ using System.Collections.Generic;
 [RequireComponent(typeof(LineRenderer))]
 public class LaserLogic : MonoBehaviour
 {
+    [Header("Öğretici (Tutorial) Yavaşlatması")]
+    public static bool useTutorialSpeed = false; // Tüm lazerler buna bakar
+    public static float tutorialSpeed = 0.5f;    // Öğretici anındaki hız
+
     [Header("Lazer Ayarları")]
     public int maxBounces = 25;
     public float maxDistance = 50f;
@@ -207,7 +211,9 @@ public class LaserLogic : MonoBehaviour
                 Vector3 currentTip = visualPath[tipIndex];
                 Vector3 targetPoint = calculatedPath[calculatedPath.Count == visualPath.Count ? tipIndex : tipIndex];
 
-                Vector3 newTipPos = Vector3.MoveTowards(currentTip, targetPoint, laserSpeed * Time.deltaTime);
+                // YENİ: Eğer öğretici aktifse 0.5 hızını kullan, değilse normal hıza (örn 30) dön
+                float activeSpeed = useTutorialSpeed ? tutorialSpeed : laserSpeed;
+                Vector3 newTipPos = Vector3.MoveTowards(currentTip, targetPoint, activeSpeed * Time.deltaTime);
                 visualPath[tipIndex] = newTipPos;
 
                 if (Vector2.Distance(newTipPos, targetPoint) < 0.01f)
@@ -236,7 +242,12 @@ public class LaserLogic : MonoBehaviour
             Vector2 startPoint = visualPath[i];
             Vector2 endPoint = visualPath[i + 1];
 
-            RaycastHit2D[] hits = Physics2D.LinecastAll(startPoint, endPoint, interactableLayers);
+            // YENİ: Lazerin yönünü buluyoruz
+            Vector2 dir = (endPoint - startPoint).normalized;
+
+            // YENİ DÜZELTME: Bitiş noktasını (endPoint) lazerin yönünde 0.15 birim ileri itiyoruz.
+            // Böylece lazer yuvarlak yüzeylerde sınıra takılıp kalmıyor, kedinin içine işliyor.
+            RaycastHit2D[] hits = Physics2D.LinecastAll(startPoint, endPoint + (dir * 0.15f), interactableLayers);
 
             foreach (var hit in hits)
             {
@@ -251,7 +262,7 @@ public class LaserLogic : MonoBehaviour
                 }
                 else if (hit.collider.CompareTag("Cat"))
                 {
-                    // YENİ: Sadece Zararsız DEĞİLSE kediyi öldür
+                    // Siyah camdan geçmediyse, yani zararlıysa öldür
                     if (!isHarmless)
                     {
                         CatLogic catScript = hit.collider.GetComponent<CatLogic>();

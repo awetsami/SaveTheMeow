@@ -779,6 +779,7 @@ MonoBehaviour:
   customStartPosition: {x: 0, y: 0}
   customStartDirection: {x: 0, y: 0}
   currentColor: {r: 0, g: 0, b: 0, a: 0}
+  isHarmless: 0
 --- !u!4 &1657968880 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 735409577364029695, guid: 442fa10e9ed2a59449db23e69021cc0a, type: 3}
@@ -834,7 +835,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
       propertyPath: levelReward
-      value: 500
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
       propertyPath: allowCrystal

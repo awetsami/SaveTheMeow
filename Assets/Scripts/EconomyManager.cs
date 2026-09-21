@@ -5,11 +5,26 @@ public class EconomyManager : MonoBehaviour
 {
     public static EconomyManager Instance;
 
-    [Header("Ekonomi Ayarları")]
-    public int levelReward = 500;        // Bölümü geçince verilecek ödül
+    [Header("Çeviriler - Kasa Arayüzü")]
+    public string kasaTR = "Kasa: ";
+    public string kasaEN = "Bank: ";
 
-    [Tooltip("Sırasıyla: 0=Ayna, 1=Taş, 2=Silgi, 3=SiyahCam, 4=Kristal")]
-    public float[] penCosts = { 50f, 25f, 0f, 400f, 200f }; // Metre başına fiyatlar
+    [Header("Çeviriler - Bölüm Sonu Özeti")]
+    public string gelirTR = "Bölüm Ödülü: ";
+    public string gelirEN = "Level Reward: ";
+
+    public string giderTR = "Maliyet: ";
+    public string giderEN = "Total Cost: ";
+
+    public string karTR = "KAZANÇ: ";
+    public string karEN = "PROFIT: ";
+
+    public string zararTR = "ZARAR: ";
+    public string zararEN = "LOSS: ";
+
+    [Header("Çeviriler - Uyarı Mesajı")]
+    public string uyariTR = "(Daha ucuz yollar bulmalısın!)";
+    public string uyariEN = "(You should find cheaper ways!)";
 
     [Header("Arayüz (UI) Bağlantıları")]
     public TextMeshProUGUI totalMoneyText;
@@ -17,18 +32,27 @@ public class EconomyManager : MonoBehaviour
     public TextMeshProUGUI profitText;
 
     [HideInInspector] public int totalMoney;
+
     [HideInInspector] public float currentLevelCost = 0f;
+
+    [Header("Ekonomi Ayarları")]
+    public int levelReward = 100;
+
+    [Tooltip("Oyuna ilk defa başlayan oyuncuya verilecek başlangıç parası")]
+    public int startingMoney = 200;
+
+    public float[] penCosts = { 50f, 25f, 0f, 400f, 200f };
 
     void Awake()
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
 
-        totalMoney = PlayerPrefs.GetInt("TotalMoney", 1000);
+        // DÜZELTME: Artık 1000 yerine Inspector'dan girdiğin startingMoney (Örn: 200) değerini okuyor
+        totalMoney = PlayerPrefs.GetInt("TotalMoney", startingMoney);
         UpdateUI();
     }
 
-    // YENİ: Hangi kalemin metresi ne kadar? (DrawManager buraya soracak)
     public float GetLineCost(float length, int penType)
     {
         if (penType < 0 || penType >= penCosts.Length) return 0f;
@@ -60,20 +84,50 @@ public class EconomyManager : MonoBehaviour
         PlayerPrefs.SetInt("TotalMoney", totalMoney);
         PlayerPrefs.Save();
 
+        // --- YENİ ÇEVİRİ SİSTEMİ ---
         if (profitText != null)
         {
+            bool isTR = (LanguageManager.CurrentLanguage == "TR");
+
+            string secilenGelir = isTR ? gelirTR : gelirEN;
+            string secilenGider = isTR ? giderTR : giderEN;
+            string secilenUyari = isTR ? uyariTR : uyariEN;
+
             if (profit >= 0)
-                profitText.text = "Ödül: " + levelReward + "\nMaliyet: -" + costInt + "\nKAZANÇ: +" + profit + " 🪙";
+            {
+                string secilenKar = isTR ? karTR : karEN;
+                profitText.text = secilenGelir + levelReward + "\n" +
+                                  secilenGider + "-" + costInt + "\n" +
+                                  secilenKar + "+" + profit + " 🪙";
+            }
             else
-                profitText.text = "Ödül: " + levelReward + "\nMaliyet: -" + costInt + "\nZARAR: " + profit + " 🪙\n(Daha ucuz yollar bulmalısın!)";
+            {
+                string secilenZarar = isTR ? zararTR : zararEN;
+                profitText.text = secilenGelir + levelReward + "\n" +
+                                  secilenGider + "-" + costInt + "\n" +
+                                  secilenZarar + profit + " 🪙\n" + secilenUyari;
+            }
         }
 
         UpdateUI();
     }
 
-    private void UpdateUI()
+    public void UpdateUI()
     {
-        if (totalMoneyText != null) totalMoneyText.text = "Kasa: " + totalMoney;
-        if (currentCostText != null) currentCostText.text = "Harcanan: " + Mathf.RoundToInt(currentLevelCost);
+        bool isTR = (LanguageManager.CurrentLanguage == "TR");
+
+        // 1. Kasa Yazısı Çevirisi
+        string prefix = isTR ? kasaTR : kasaEN;
+        if (totalMoneyText != null)
+        {
+            totalMoneyText.text = prefix + totalMoney.ToString();
+        }
+
+        // 2. Anlık Harcama (currentCostText) Çevirisi
+        if (currentCostText != null)
+        {
+            string costPrefix = isTR ? giderTR : giderEN;
+            currentCostText.text = costPrefix + Mathf.RoundToInt(currentLevelCost).ToString();
+        }
     }
 }

@@ -610,6 +610,7 @@ MonoBehaviour:
   customStartPosition: {x: 0, y: 0}
   customStartDirection: {x: 0, y: 0}
   currentColor: {r: 0, g: 0, b: 0, a: 0}
+  isHarmless: 0
 --- !u!1001 &1779990307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -660,7 +661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5634026029755293850, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
       propertyPath: levelReward
-      value: 350
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8693861192274473215, guid: 3b86933beddd2174aac6bc07b8842750, type: 3}
       propertyPath: m_Name
